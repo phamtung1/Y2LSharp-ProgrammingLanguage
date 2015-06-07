@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<SyntaxDefinition name = "y2l" extensions = ".y2l">
+	
+	<Properties>
+		<Property name="LineComment" value="//"/>
+	</Properties>
+	
+	<Digits name = "Digits" bold = "false" italic = "false" color = "DarkBlue"/>
+
+	<RuleSets>
+		<RuleSet ignorecase="false">
+			<Delimiters>&<>~!%^*()-+=|\#/{}[]:;"' ,	.?</Delimiters>
+			
+			<Span name = "PreprocessorDirectives" rule = "PreprocessorSet" bold="false" italic="false" color="Green" stopateol = "true">
+				<Begin>#</Begin>
+			</Span>
+
+                        <!–– ... ––>
+		  
+			<Span name = "BlockComment" rule = "CommentMarkerSet" bold = "false" italic = "false" color = "Green" stopateol = "false">
+				<Begin>/*</Begin>
+				<End>*/</End>
+			</Span>
+			
+			<MarkPrevious bold = "true" italic = "false" color = "MidnightBlue">(</MarkPrevious>
+			
+			<KeyWords name = "Punctuation" bold = "false" italic = "false" color = "DarkGreen">
+				<Key word = "?" />
+				<Key word = "," />
+				<Key word = "." />
+				<Key word = ";" />
+				<Key word = "(" />
+				<Key word = ")" />
+				<Key word = "[" />
+				<Key word = "]" />
+				<Key word = "{" />
+				<Key word = "}" />
+				<Key word = "+" />
+				<Key word = "-" />
+				<Key word = "/" />
+				<Key word = "%" />
+				<Key word = "*" />
+				<Key word = "<" />
+				<Key word = ">" />
+				<Key word = "^" />
+				<Key word = "=" />
+				<Key word = "~" />
+				<Key word = "!" />
+				<Key word = "|" />
+			    <Key word = "&" />
+		  	</KeyWords>
+		  
+			<KeyWords name = "AccessKeywords" bold="true" italic="false" color="Black">
+				<Key word = "this" />
+				<Key word = "base" />
+			</KeyWords>
+
+                        <!–– ... ––>
+		</RuleSet>
+		
+		<RuleSet name = "CommentMarkerSet" ignorecase = "false">
+		  	<Delimiters><>~!@%^*()-+=|\#/{}[]:;"' ,	.?</Delimiters>
+			<KeyWords name = "ErrorWords" bold="true" italic="false" color="Red">
+				<Key word = "TODO" />
+				<Key word = "FIXME" />
+	 	 	</KeyWords>
+			<KeyWords name = "WarningWords" bold="true" italic="false" color="#EEE0E000">
+				<Key word = "HACK" />
+				<Key word = "UNDONE" />
+	 	 	</KeyWords>
+		</RuleSet>
+	</RuleSets>
+</SyntaxDefinition>

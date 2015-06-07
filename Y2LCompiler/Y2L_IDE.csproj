@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1A38DDE-439F-46B2-9AC8-B22FA25CA48F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Y2L_IDE</RootNamespace>
+    <AssemblyName>Y2L Sharp Express</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Resources\Y2l_project_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Y2L_IDE.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Crom.Controls, Version=2.0.5.21, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Crom.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.TextEditor">
+      <HintPath>Reference\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmSaveDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmSaveDialog.Designer.cs">
+      <DependentUpon>ConfirmSaveDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ClipboardMonitor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Editor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ExpandedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ImageListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Y2TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionForm.designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="ProjectManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedForms\DocumentContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabbedForms\DocumentContainer.Designer.cs">
+      <DependentUpon>DocumentContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedForms\ErrorListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabbedForms\ErrorListForm.Designer.cs">
+      <DependentUpon>ErrorListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedForms\ProjectExplorerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabbedForms\ProjectExplorerForm.Designer.cs">
+      <DependentUpon>ProjectExplorerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedForms\StartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabbedForms\StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedForms\SyntaxTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabbedForms\SyntaxTreeForm.Designer.cs">
+      <DependentUpon>SyntaxTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedForms\ToolBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabbedForms\ToolBox.Designer.cs">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmSaveDialog.resx">
+      <DependentUpon>ConfirmSaveDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedForms\DocumentContainer.resx">
+      <DependentUpon>DocumentContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedForms\ErrorListForm.resx">
+      <DependentUpon>ErrorListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedForms\ProjectExplorerForm.resx">
+      <DependentUpon>ProjectExplorerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedForms\StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedForms\SyntaxTreeForm.resx">
+      <DependentUpon>SyntaxTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedForms\ToolBox.resx">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\y2l.xshd" />
+    <None Include="Resources\oie_1331140zVNP2MRz.gif" />
+    <None Include="Resources\Y2l_project_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assign Case.ico" />
+    <None Include="Resources\header-design.jpg" />
+    <None Include="Resources\play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Y2LCore\Y2LCore.csproj">
+      <Project>{033F58CA-3938-4BD8-A080-265098B6FA86}</Project>
+      <Name>Y2LCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Y2LInterpreter\Y2LInterpreter.csproj">
+      <Project>{2C875E49-D32B-4E09-B010-35F49BF3F854}</Project>
+      <Name>Y2LInterpreter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Y2l_code_file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mimetypes-unknown.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_01.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

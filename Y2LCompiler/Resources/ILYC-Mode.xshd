@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+
+<SyntaxDefinition name = "ILYC" extensions = ".ilc">
+  
+  <Properties>
+    <Property name="LineComment" value="#" />
+  </Properties>
+
+  <Digits name ="Digits" bold ="false" italic ="false" color ="Red"/>
+
+  <RuleSets>
+    <RuleSet ignorecase = "false">
+      <Delimiters>()[]{}!=&gt;&lt;+-*/%.,;:</Delimiters>
+
+      <Span name ="LineComment" bold ="false" italic ="true" color ="Green" stopateol ="true">
+        <Begin>#</Begin>
+      </Span>
+
+      <Span name ="String" bold ="false" italic ="false" color ="Brown" stopateol ="false" escapecharacter="\">
+        <Begin>&quot;</Begin>
+        <End>&quot;</End>
+      </Span>
+
+      <KeyWords name ="PrimaryKeywords" bold="true" italic = "false" color = "Blue">
+        <Key word = "do" />
+        <Key word = "done" />
+        <Key word = "if" />
+        <Key word = "then" />
+        <Key word = "else" />
+        <Key word = "switch" />
+        <Key word = "case" />
+        <Key word = "default" />
+        <Key word = "for" />
+        <Key word = "from" />
+        <Key word = "to" />
+        <Key word = "downto" />
+        <Key word = "while" />
+        <Key word = "until" />
+        <Key word = "loop" />
+        <Key word = "break" />
+        <Key word = "try" />
+        <Key word = "catch" />
+        <Key word = "throw" />
+        <Key word = "function" />
+        <Key word = "procedure" />
+        <Key word = "ref" />
+        <Key word = "return" />
+        <Key word = "include" />
+        <Key word = "once" />
+        <Key word = "import" />
+        <Key word = "struct" />
+        <Key word = "new" />
+        <Key word = "delegate" />
+        <Key word = "this" />
+        <Key word = "true" />
+        <Key word = "false" />
+      </KeyWords>
+
+      <KeyWords name ="TypeKeywords" bold="true" italic = "false" color = "DodgerBlue">
+        <Key word = "bool" />
+        <Key word = "int" />
+        <Key word = "float" />
+        <Key word = "string" />
+        <Key word = "void" />
+      </KeyWords>
+
+      <KeyWords name ="OperatorKeywords" bold="false" italic = "false" color = "Sienna">
+        <Key word = "and" />
+        <Key word = "or" />
+        <Key word = "xor" />
+        <Key word = "not" />
+        <Key word = "in" />
+      </KeyWords>
+
+      <KeyWords name ="FunctionKeywords" bold="false" italic = "false" color = "SteelBlue">
+        <Key word = "typeof" />
+        <Key word = "free" />
+        <Key word = "iif" />
+        <Key word = "puts" />
+        <Key word = "print" />
+        <Key word = "reads" />
+        <Key word = "readc" />
+        <Key word = "tobool" />
+        <Key word = "toint" />
+        <Key word = "tofloat" />
+        <Key word = "tostring" />
+      </KeyWords>
+    </RuleSet>
+  </RuleSets>
+  
+</SyntaxDefinition>
