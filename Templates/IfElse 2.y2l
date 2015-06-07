@@ -1,0 +1,45 @@
+module Program{
+function void Main()
+{
+	Write("Nhap thang: ");
+	int m=#[return System.Int32.Parse](ReadLine());
+	Write("Nhap nam: ");
+	int y=#[return System.Int32.Parse](ReadLine());
+
+	int numOfDay=Test(m,y);
+	
+	Write("Thang "+m+"/"+y+" co "+numOfDay+" ngay");
+	ReadLine();
+}
+function int Test(int month,int year)
+{
+neu((month==1) || (month==3)
+|| (month==5)
+|| (month==7)
+|| (month==8)
+|| (month==10)
+|| (month==12)
+)
+{
+	return 31;
+}
+hoacneu((month==4)
+|| (month==6)
+|| (month==9)
+|| (month==11))
+{
+	return 30;
+}
+hoac
+{
+	neu(((year % 4==0) && (year % 100 != 0)) || (year % 400 == 0))
+	{
+		return 29;
+	}hoac
+	{
+		return 28;
+	}
+}
+
+}
+}

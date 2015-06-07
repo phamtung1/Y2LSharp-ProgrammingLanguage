@@ -1,0 +1,7 @@
+neu(value)\n{\n}
+hoac{\n}
+hoacneu( ){\n}
+lap(nguyen i=0;i<value;i=i+1;)\n{\n}
+#[System.Console.WriteLine]();
+#[return System.Console.ReadLine]();
+#[return System.Int32.Parse](value);

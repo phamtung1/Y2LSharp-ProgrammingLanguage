@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+
+<SyntaxDefinition name = "Y2L" extensions = ".y2l">
+  
+  <Properties>
+    <Property name="LineComment" value="//" />
+  </Properties>
+
+  <Digits name ="Digits" bold ="false" italic ="false" color ="DarkBlue"/>
+
+  <RuleSets>
+    <RuleSet ignorecase = "false">
+      <Delimiters>()[]{}!=&gt;&lt;+-*/%.,;:</Delimiters>
+
+      <Span name ="BlockComment" bold ="false" italic ="false" color ="Green" stopateol ="true">
+        <Begin>/*</Begin>
+        <End>*/</End>
+      </Span>
+
+      <Span name ="String" bold ="false" italic ="false" color ="Brown" stopateol ="false" escapecharacter="\">
+        <Begin>&quot;</Begin>
+        <End>&quot;</End>
+      </Span>
+
+<Span name ="CSharp" bold ="false" italic ="false" color ="Blue" stopateol ="false" escapecharacter="\">
+        <Begin>#[</Begin>
+        <End>]</End>
+      </Span>
+<MarkPrevious bold = "true" italic = "false" color = "MidnightBlue">(</MarkPrevious>
+
+      <KeyWords name ="PrimaryKeywords" bold="true" italic = "false" color = "Red">
+        <Key word = "module" />
+        <Key word = "function" />
+        <Key word = "if" />
+        <Key word = "else" />
+        <Key word = "elseif" />
+        <Key word = "for" />
+        <Key word = "while" />
+        <Key word = "return" />
+        <Key word = "true" />
+        <Key word = "false" />
+      </KeyWords>
+
+      <KeyWords name ="TypeKeywords" bold="true" italic = "false" color = "DodgerBlue">
+        <Key word = "int" />
+        <Key word = "double" />
+        <Key word = "bool" />
+        <Key word = "chuoi" />
+        <Key word = "void" />
+      </KeyWords>
+
+<KeyWords name = "Punctuation" bold = "false" italic = "false" color = "DarkGreen">
+<Key word = "?" />
+<Key word = "," />
+<Key word = "." />
+<Key word = ";" />
+<Key word = "(" />
+<Key word = ")" />
+<Key word = "{" />
+<Key word = "}" />
+<Key word = "+" />
+<Key word = "-" />
+<Key word = "/" />
+<Key word = "%" />
+<Key word = "^" />
+<Key word = "=" />
+</KeyWords>
+    </RuleSet>
+  </RuleSets>
+</SyntaxDefinition>

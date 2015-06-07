@@ -1,0 +1,7 @@
+module Program{
+	function void Main()
+	{
+		Write("Hello World");
+		ReadLine();
+	}
+}

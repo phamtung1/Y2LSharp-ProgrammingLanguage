@@ -40,10 +40,11 @@
   <ItemGroup>
     <Reference Include="Crom.Controls, Version=2.0.5.21, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Crom.Controls.dll</HintPath>
+      <HintPath>_Dependencies\DLLs\Crom.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.TextEditor">
-      <HintPath>Reference\ICSharpCode.TextEditor.dll</HintPath>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.2.0.5777, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\DLLs\ICSharpCode.TextEditor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -194,6 +195,9 @@
       <DependentUpon>ToolBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="highlighting\y2lSyntax.xshd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -206,6 +210,30 @@
     <EmbeddedResource Include="Resources\y2l.xshd" />
     <None Include="Resources\oie_1331140zVNP2MRz.gif" />
     <None Include="Resources\Y2l_project_icon.ico" />
+    <None Include="_Dependencies\Templates\Empty.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\ForLoop1.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\ForLoop2.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\HelloWorld.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\IfElse 2.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\IfElse1.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\InterchangeSort.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="_Dependencies\Templates\Recursive.y2l">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Assign Case.ico" />
@@ -223,7 +251,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\" />
+    <Content Include="_Dependencies\CodeSnipplets\ASCII Table.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_Dependencies\CodeSnipplets\Y2L Code.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_Dependencies\DLLs\Crom.Controls.dll" />
+    <Content Include="_Dependencies\DLLs\ICSharpCode.TextEditor.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Y2l_code_file.ico" />

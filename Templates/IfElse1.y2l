@@ -1,0 +1,28 @@
+module Program{
+function void Main()
+{
+	int a=4;
+
+	if((a==1) || (a==3))	
+	{
+		Write("A");
+	}
+	elseif(a==2)	
+	{
+		Write("B");
+	}
+	elseif(a<5)	
+	{
+		Write("C");
+	}
+	elseif(a<10)	
+	{
+		Write("D");
+	}
+	else
+	{
+		Write("E");
+	}
+	ReadLine();
+}
+}

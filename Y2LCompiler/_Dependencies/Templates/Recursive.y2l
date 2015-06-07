@@ -1,0 +1,22 @@
+module Program{
+	function void Main()
+	{		
+		Write("Enter an integer > 1 :");
+		string s=ReadLine();
+		int n=#[return System.Int32.Parse](s);
+		int a=Factorial(n);
+		Write("F "+n+" = " +a);
+		ReadLine();
+	}
+	function int Factorial(int n)
+	{
+		if(n==1)
+		{
+			return 1;
+		}
+		else
+		{
+			return n*Factorial(n-1);
+		}
+	}	
+}

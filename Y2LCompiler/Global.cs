@@ -9,6 +9,7 @@ namespace Y2L_IDE
 {
     class StringTable
     {
+        private const string DEPENDENCIES_DIR = "_Dependencies";
         public const string FILE_PROJECT_EXTENSION = "y2lproj";
         public const string FILE_CODE_EXTENSION = "y2l";
         public const string FILE_EXE_EXTENSION = "yexe";
@@ -16,8 +17,8 @@ namespace Y2L_IDE
         public const string RECENT = "Recent";
 
         public const string DEFAULT_CODE_FILE = "Program." + FILE_CODE_EXTENSION;
-        public const string TEMPLATES_DIR = "Templates";
-        public const string CODESNIPPLET_DIR = "CodeSnipplets";
+        public const string TEMPLATES_DIR = DEPENDENCIES_DIR + "/" + "Templates";
+        public const string CODESNIPPLET_DIR = DEPENDENCIES_DIR + "/" + "CodeSnipplets";
         public const string URL = "http://yinyangit.wordpress.com";
     }
     class Global
